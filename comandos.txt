@@ -20,3 +20,6 @@ Si ya tengo documentos en el git add y hago modificaciones puedo hacer directame
 
 Ver cambios en especifico que se hicieron  en todos los documentos.
     git log --stat 
+
+Ver archivo en su primer version 
+    git checkout iddelcommit nombrearchivo.txt
