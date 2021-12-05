@@ -95,9 +95,14 @@ Si es la primera vez en hacer eso tendremos que iniciar sesion en github
 
 Si llega a dar error debido a que necesitamos los datos que hay en el repo de git necesitamos hacer primero un
 	git pull origin master --->que consiste en traer lo archivos del origin al master
-	git pll origin master --allow-unrelated-histories  -->Forzara a traer los archivos si da warnings
+	git pull origin master --allow-unrelated-histories  -->Forzara a traer los archivos si da warnings
 
 Al dar este comando git push origin master, al github ahora llamar a su principal main, ocasiono que se creara una rama, para solucionarlo
 tuve que ir a la rama main y dar en crear un pull requeste, entre el main y la rama creada master, 
 al unirlas despues debemos autorizar el merge y posteriormente nos permitira eliminar la rama master creada.
 
+-------------Errores de la rama master ----------------------------------
+Para quitar el error de la rama master y hacer que ahora se llame main hacer lo siguiente
+    git branch -M main  ----> lo que movera todo a la rama main y quitara la rama master 
+    git remote add origin link_delrepo_engit_conHTTPS   ------>solo hacer si no se habia declarado antes
+    git push -u  origin main  ---->mandar cambios al repositorio
