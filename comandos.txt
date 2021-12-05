@@ -5,3 +5,15 @@ git commit -m "redactar cambio"
 git log -- observar historial en el repositorio
 q salir de la ejecucion de algun comando.
 git show nombrearchivo.txt -- nos muestar los cambios entre la ultima version 
+
+Para comparar dos versiones en especifico del repositorio 
+    git diff iddelcomit iddelcommit2
+
+regresar un archivo a su version anterior 
+    git reset iddelcomit --hard  --> este tipo de reset es el mas fuerte y tal veze
+    el mas usado debido a que todo vuelve al estado anterior
+
+    git reset iddelcomit --soft  -->lo que tenemos en git add se mantiene para poder agregarlo a un nuevo commi
+
+Si ya tengo documentos en el git add y hago modificaciones puedo hacer directamente un 
+    git diff y ver lo que se ha modificado.
