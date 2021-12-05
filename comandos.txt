@@ -1,0 +1,77 @@
+git init -- inicializamos repositorio en ruta actual
+git status -- ver los cambion en el repo
+git add . agregar todos los cambios en todos los archivos 
+git commit -m "redactar cambio"
+git log -- observar historial en el repositorio
+q salir de la ejecucion de algun comando.
+git show nombrearchivo.txt -- nos muestar los cambios entre la ultima version 
+
+Para comparar dos versiones en especifico del repositorio 
+    git diff iddelcomit iddelcommit2
+
+regresar un archivo a su version anterior 
+    git reset iddelcomit --hard  --> este tipo de reset es el mas fuerte y tal veze
+    el mas usado debido a que todo vuelve al estado anterior
+
+    git reset iddelcomit --soft  -->lo que tenemos en git add se mantiene para poder agregarlo a un nuevo commi
+
+Si ya tengo documentos en el git add y hago modificaciones puedo hacer directamente un 
+    git diff y ver lo que se ha modificado.
+
+Ver cambios en especifico que se hicieron  en todos los documentos.
+    git log --stat 
+
+Ver archivo en su primer version y regresear a ella.
+    git checkout iddelcommit nombrearchivo.txt
+
+Si queremos regresear a la version master solo
+    git checkout master nombrearchivo.txt
+
+-----------Github-------------
+
+Para github lo unico que cabiaria seria que en lugar de un git init, se realiza un:
+    git clone urldegitconelrepositorio
+
+lo demas sera igual, git add para trakear cambios, git commit para establecer esos cambios y 
+    git push para subir los cambios al repositorio remoto y al master 
+
+para traer cambios del repositorio remoto necesito (actualizacion)
+    git fetch --> trae cambios al repositorio local, pero no los trae(copia) a mis archivos, para ello debo
+        git merge -->fusionara mis archivos con los de el fetch
+
+git pull --> Es como hacer un git fetch y git merge, me trae los cambios y hace las modificaciones.
+
+----creacion de ramas---------------
+
+para agregar el comando add y el commit al mismo tiempo se puede realizar lo siguiente:
+    git commit -am "mensaje" --> solo funciona con archivos a los que ya se les habia hecho add anteriormente.
+
+git show -->me muestra los ultimos cambios que hice 
+
+Para crear la nueva rama:
+    git branch nombredenuevarama
+
+Moverme a la nueva rama o cambiar a cualquier otras ramas:
+    git checkout nombrerama
+
+    nos podemos mover de una rama a otra y se modificaran
+    automaticamente los cambios. 
+
+Unir ramas con un merge
+
+siempre los merge se deben realizar en el master y no en la rama
+ya que lo que se manda es la rama al master y no quiero que pase lo contrario.
+git branch --> ver que ramas hay en el repositorio
+git merge nombre de la rama (estamos ubicados e la rama master)
+el merge es lo mismo que un commit, por lo que cuando se invoque el comando merge se debe insertar una descripcion de los cambios
+
+	git merge nombrerama "Se unieron las ramas"
+
+Al hacer el commit traeremos tambien el historial de todos los commits hechos en la rama, por lo que los podremos visualizar en
+git log .
+
+---Solucion de conflictos--------
+Cuando se hace un merge y hay conflictos en visual nos aparecera que cambios deseas conservar
+    podemos decidir dejar los del master, dejar los de la rama o cambiar manualmente
+    al solucionarlos lo que se debe terminar haciendo es un commit:
+        git commit -am "Se solucionaron los conflictos del merge entre el master y la rama"
