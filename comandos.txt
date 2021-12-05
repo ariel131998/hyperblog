@@ -106,3 +106,5 @@ Para quitar el error de la rama master y hacer que ahora se llame main hacer lo 
     git branch -M main  ----> lo que movera todo a la rama main y quitara la rama master 
     git remote add origin link_delrepo_engit_conHTTPS   ------>solo hacer si no se habia declarado antes
     git push -u  origin main  ---->mandar cambios al repositorio
+    git push origin main 
+    git push  --->automaticamente subira los cambios, pero antes debes hacer un commit de los cambios del repo local.
