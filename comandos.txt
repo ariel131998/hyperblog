@@ -75,3 +75,29 @@ Cuando se hace un merge y hay conflictos en visual nos aparecera que cambios des
     podemos decidir dejar los del master, dejar los de la rama o cambiar manualmente
     al solucionarlos lo que se debe terminar haciendo es un commit:
         git commit -am "Se solucionaron los conflictos del merge entre el master y la rama"
+
+------Agregar repositorio github-------
+
+Primero crear repositorio en git
+Recomendable crear archivo .read
+Una vez creado dar en Code y en copiar HTTPS link
+Despues en terminal de git, en la ubicacion de el repo, para subir todos los archivos que ya tenemos en local poner
+	git remote add origin https://github.com/ariel131998/hyperblog.git 
+Una vez ingresado ese comando ahora contaremos con un origin
+	git remote -->mostrara el origin
+	git remote -v ---->mostrara lo que podemos hacer al origin, fetch o push 
+
+Ahora para mandar los datos al repositorio haremos uso de nuestro push:
+	git push origin main
+	que se traduciria a git push(subir al repo) origin main (de la rama maestra al origin de nuestro repo en git)
+
+Si es la primera vez en hacer eso tendremos que iniciar sesion en github
+
+Si llega a dar error debido a que necesitamos los datos que hay en el repo de git necesitamos hacer primero un
+	git pull origin master --->que consiste en traer lo archivos del origin al master
+	git pll origin master --allow-unrelated-histories  -->Forzara a traer los archivos si da warnings
+
+Al dar este comando git push origin master, al github ahora llamar a su principal main, ocasiono que se creara una rama, para solucionarlo
+tuve que ir a la rama main y dar en crear un pull requeste, entre el main y la rama creada master, 
+al unirlas despues debemos autorizar el merge y posteriormente nos permitira eliminar la rama master creada.
+
