@@ -1,5 +1,9 @@
 Esta es la historia de Ariel
 
-Ariel Ortega tiene 23 años 
+Ariel Ortega tiene 33 años, y nacion en mexico
 
 Hoy hablaremos de su historia
+git init -- inicializamos repositorio en ruta actual
+git status -- ver los cambion en el repo
+git add . agregar todos los cambios en todos los archivos 
+git commit -m "redactar cambio"
