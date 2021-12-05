@@ -51,5 +51,11 @@ git show -->me muestra los ultimos cambios que hice
 Para crear la nueva rama:
     git branch nombredenuevarama
 
-Moverme a la nueva rama:
+Moverme a la nueva rama o cambiar a cualquier otras ramas:
     git checkout nombrerama
+
+    nos podemos mover de una rama a otra y se modificaran
+    automaticamente los cambios. 
+
+Unir ramas con un merge
+    
