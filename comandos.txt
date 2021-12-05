@@ -26,3 +26,17 @@ Ver archivo en su primer version
 
 Si queremos regresear a la version master solo
     git checkout master nombrearchivo.txt
+
+-----------Github-------------
+
+Para github lo unico que cabiaria seria que en lugar de un git init, se realiza un:
+    git clone urldegitconelrepositorio
+
+lo demas sera igual, git add para trakear cambios, git commit para establecer esos cambios y 
+    git push para subir los cambios al repositorio remoto y al master 
+
+para traer cambios del repositorio remoto necesito (actualizacion)
+    git fetch --> trae cambios al repositorio local, pero no los trae(copia) a mis archivos, para ello debo
+        git merge -->fusionara mis archivos con los de el fetch
+
+git pull --> Es como hacer un git fetch y git merge, me trae los cambios y hace las modificaciones.
