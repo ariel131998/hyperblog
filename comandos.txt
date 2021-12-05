@@ -70,3 +70,8 @@ el merge es lo mismo que un commit, por lo que cuando se invoque el comando merg
 Al hacer el commit traeremos tambien el historial de todos los commits hechos en la rama, por lo que los podremos visualizar en
 git log .
 
+---Solucion de conflictos--------
+Cuando se hace un merge y hay conflictos en visual nos aparecera que cambios deseas conservar
+    podemos decidir dejar los del master, dejar los de la rama o cambiar manualmente
+    al solucionarlos lo que se debe terminar haciendo es un commit:
+        git commit -am "Se solucionaron los conflictos del merge entre el master y la rama"
