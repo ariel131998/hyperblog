@@ -1,0 +1,5 @@
+git init -- inicializamos repositorio en ruta actual
+git status -- ver los cambion en el repo
+git add . agregar todos los cambios en todos los archivos 
+git commit -m "redactar cambio"
+git log -- observar historial en el repositorio
