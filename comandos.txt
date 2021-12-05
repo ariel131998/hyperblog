@@ -23,3 +23,6 @@ Ver cambios en especifico que se hicieron  en todos los documentos.
 
 Ver archivo en su primer version 
     git checkout iddelcommit nombrearchivo.txt
+
+Si queremos regresear a la version master solo
+    git checkout master nombrearchivo.txt
