@@ -58,4 +58,15 @@ Moverme a la nueva rama o cambiar a cualquier otras ramas:
     automaticamente los cambios. 
 
 Unir ramas con un merge
-    
+
+siempre los merge se deben realizar en el master y no en la rama
+ya que lo que se manda es la rama al master y no quiero que pase lo contrario.
+git branch --> ver que ramas hay en el repositorio
+git merge nombre de la rama (estamos ubicados e la rama master)
+el merge es lo mismo que un commit, por lo que cuando se invoque el comando merge se debe insertar una descripcion de los cambios
+
+	git merge nombrerama "Se unieron las ramas"
+
+Al hacer el commit traeremos tambien el historial de todos los commits hechos en la rama, por lo que los podremos visualizar en
+git log .
+
